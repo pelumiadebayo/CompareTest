@@ -1,0 +1,40 @@
+﻿@model Compar.Models.History;
+@{
+    ViewData["Title"] = "Comparison";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var percentage = ViewBag.percentage as string;
+}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Compararison</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+
+
+    </div>
+</div>
+
+<div class="row container">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">First Student: @Model.FirstStudentName</h5>
+                <p class="card-text">Similarities: Answer 2.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"> Sendcond Student: @Model.SecondStudentName</h5>
+                <p class="card-text">Similarities: Answer 1.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-sm-10 text-center p-5">
+    <div class="card ">
+        <div class="card-body">
+            <h1 class="card-title">@Model.ComapisonPercentage%</h1>
+            <p class="card-text">After Comparing @Model.SecondStudentFile to @Model.FirstStudentFile.</p>
+        </div>
+    </div>
+    </div>

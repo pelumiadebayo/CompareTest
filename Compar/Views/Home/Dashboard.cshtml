@@ -1,0 +1,64 @@
+﻿@model Compar.Models.Login
+
+@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var user = ViewBag.Email as string;
+    ViewData["User"] = user;
+
+}
+
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">History</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <div class="btn-group mr-2">
+            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+        </div>
+
+    </div>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-striped table-sm">
+        <thead>
+            <tr>
+                <th>S/N</th>
+                <th>First Student</th>
+                <th>Second Student</th>
+                <th>Conparisn</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>1,005</td>
+                <td>Nulla</td>
+                <td>quis</td>
+                <td>70%</td>
+                <td>
+                    <button>View</button>
+                    <button>Compare</button>
+                </td>
+            </tr>
+            <tr>
+                <td>1,006</td>
+                <td>nibh</td>
+                <td>elementum</td>
+                <td>50%</td>
+                <td>
+                    <button>View</button>
+                    <button>Compare</button>
+                </td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</div>
+
+
+

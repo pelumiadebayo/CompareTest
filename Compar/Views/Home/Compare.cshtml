@@ -1,0 +1,35 @@
+﻿@model Compar.Models.Compare;
+@{
+    ViewData["Title"] = "Compare";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Compare</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        
+
+    </div>
+</div>
+<div class="p-5 m-5 border">
+    <form method="post" asp-action="Compare">
+        <div class="form-group" >
+            <label for="firstName">First Student Name</label>
+            <input type="text" class="form-control" id="v" aria-describedby="emailHelp" asp-for="FirstStudentName">
+        </div>
+        <div class="form-group">
+            <label for="firstFile">First Student file </label>
+            <input type="file" class="form-control-file" id="firstFile" asp-for="FirstStudentFile">
+        </div>
+        <div class="form-group">
+            <label for="secondName">Second Student Name</label>
+            <input type="text" class="form-control" id="secondName" aria-describedby="emailHelp" asp-for="SecondStudentName">
+        </div>
+        <div class="form-group">
+            <label for="secondFile">Second Student file</label>
+            <input type="file" class="form-control-file" id="secondFile" asp-for="SecondStudentFile">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Compare</button>
+    </form>
+</div>

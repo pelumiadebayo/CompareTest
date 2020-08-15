@@ -25,13 +25,15 @@ namespace Compar.Controllers
             return View();
         }
 
-        public IActionResult Dashboard(string Id)
+        public IActionResult Dashboard()
         {
-            ViewBag.Email = Id;
             return View();
         }
-        public IActionResult Compare()
+        public IActionResult Compare(string Id
+)
         {
+            ViewBag.Email = Id;
+
             return View();
         }
         public IActionResult Comparison(string FN, string FF, string SN, string SF)
@@ -99,7 +101,7 @@ namespace Compar.Controllers
                     if (result.Success == true)
                     {
 
-                        return RedirectToAction("Dashboard", new { Id = result.Data.Email });
+                        return RedirectToAction("Compare", new { Id = result.Data.Email });
                     }
                     else
                     {
